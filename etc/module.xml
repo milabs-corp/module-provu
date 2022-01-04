@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+
 	<module name="Milabs_Provu" setup_version="1.00.01" >
 		<sequence>
 			<module name="Magento_Sales"/>
