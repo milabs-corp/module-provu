@@ -1,0 +1,10 @@
+<?php if($block->getMethodCode() == 'provu'):
+$url = $block->getInfo('authenticationURL');
+?>
+	<p>
+		<a href="<?php echo $url; ?>" target="_blank" class="action primary continue">
+			<?php echo __('Imprimir Boleto') ?>
+		</a>
+	</p>
+<?php endif; ?>
+

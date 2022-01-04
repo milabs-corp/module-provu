@@ -1,0 +1,16 @@
+<?php /** @var $block \Magento\Shipping\Block\Adminhtml\View */ ?>
+<?php $order = $block->getOrder() ?>
+
+<?php
+
+$isProvu = $order->getPayment()->getMethod();
+if ($isProvu !=  \Milabs\Provu\Model\Payment\Provu::CODE) {
+	return;
+}
+
+$info = $order->getPayment()->getAdditionalInformation();
+
+if (isset($info['transactionId']) && $order->getStatus() == "pending_payment") :
+	$url =  $this->getUrl('provu/update/index', ['transactionId' => $info['transactionId']]);?>
+	<a href="<?php echo $url; ?>" onclick="return confirm('Tem certeza?')">Atualizar situação manualmente</a>
+<?php endif ?>

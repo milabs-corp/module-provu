@@ -1,0 +1,22 @@
+{
+    "name": "milabs/module-provu",
+    "description": "Modulo Magento 2 - Milabs Boleto parcelado Provu",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "M!labs",
+            "email": "ti@mixteldistribuidora.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Milabs\\Provu\\": ""
+        }
+    }
+}

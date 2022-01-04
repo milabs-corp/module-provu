@@ -1,0 +1,50 @@
+<?php
+
+use Magento\Framework\View\Element\Template;
+
+/** @var Template $block */
+?>
+
+<?php if ($block->getData('state') == 'success') : ?>
+
+    <div class="class-custom-banner-checkout">
+        <fieldset class="box-payment-group2 box-payment-option">
+            <div class="payment-provu-content">
+
+                <img src='<?= $block->getLogoProvu(); ?>' />   
+                <div class="message success">Recebemos seu pedido estaremos assim que atualizado estaremos nofiticando por e-mail!</div>
+                <br>
+                <br>
+                <div class="primary">
+                    <a class="button action continue primary" style="float: left;" href="<?php echo $block->getBaseUrl();?>">Continuar Comprando</a>
+                </div>
+                <div class="primary" style="float: right;">
+                    <a class="button action  primary" href="<?php echo $this->getUrl("customer/account/login"); ?>">Meus Pedidos</a>
+                </div>
+
+            </div>
+        </fieldset>
+    </div>
+
+<?php else : ?>
+
+    <div class="class-custom-banner-checkout">
+        <fieldset class="box-payment-group2 box-payment-option">
+            <div class="payment-provu-content">
+
+                <img src='<?= $block->getLogoProvu(); ?>' />   
+                <div class="message success">Cliente redirecionado para loja</div>
+                <br>
+                <br>
+                <div class="primary">
+                    <a class="button action continue primary" style="float: left;" href="<?php echo $block->getBaseUrl(); ?>">Continuar Comprando</a>
+                </div>
+                <div class="primary" style="float: right;">
+                    <a class="button action  primary" href="<?php echo $this->getUrl("customer/account/login"); ?>">Meus Pedidos</a>
+                </div>
+                
+            </div>
+        </fieldset>
+    </div>
+
+<?php endif; ?>

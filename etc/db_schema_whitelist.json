@@ -1,0 +1,18 @@
+{
+    "sales_order": {
+        "column": {
+            "provu_transaction_id": true,
+            "Parcells": true
+        }
+    },
+    "sales_order_grid": {
+        "column": {
+            "Parcells": true
+        }
+    },
+    "quote": {
+        "column": {
+            "Parcells": true
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.class-custom-banner-checkout {
+    padding: 15px 10px;
+}
+
+.payment-provu-content {
+    padding: 0 1em;
+}
+.payment-provu-content img{
+    position: relative;
+    margin: 0;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    z-index: 100;
+}
+
+.checkout-billing-address{
+    display: none;
+}
+.payment-provu-content-title {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.payment-lendito-content-descriptions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+.payment-lendito-content-descriptions div.payment-lendito-content-item:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.payment-lendito-content-item {
+    align-items: center;
+    display: flex;
+}
+
+.payment-lendito-content-item-box-image {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 5em;
+}
+
+.payment-lendito-content-item-box-image p {
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+.payment-lendito-content-item-box-text {
+    margin-left: 1em;
+}
+
+.payment-lendito-content-item-box-text p {
+    font-size: 12px;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+
+.payment-method.provu .payment-method-title.field.choice {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.miniImgPaymnetProvu{
+    width: 28px;
+    height: 28px;
+    margin-left: 2px;
+    margin-right: 7px;
+
+}
+
+@media (max-width: 490px) {
+    .payment-provu-content-title {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .payment-lendito-content-descriptions {
+        margin-top: 2em;
+    }
+
+    .payment-lendito-content-descriptions div.payment-lendito-content-item:not(:last-child) {
+        margin-bottom: 2em;
+    }
+
+    .payment-lendito-content-item {
+        flex-direction: column;
+    }
+
+    .payment-lendito-content-item-box-image {
+        margin-bottom: 0.5em;
+    }
+
+    .payment-lendito-content-item-box-text p {
+        text-align: center;
+    }
+}
