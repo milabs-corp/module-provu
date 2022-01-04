@@ -1,4 +1,4 @@
-# Magento2 Modulo Milabs Provu
+# Modulo M!Labs magento2 - boleto parcelado Provu
 
     ``milabs/module-provu``
 
