@@ -23,6 +23,10 @@
 				<field id="api_token" type="text" sortOrder="50" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
 					<label>Api Token</label>
 				</field>
+				<field id="days_cron" type="text" sortOrder="50" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Remoção de pedidos</label>
+					<comment>Numero de dias para remoção de pedidos com status pendente pagamento.</comment>
+				</field>
 				<field id="sort_order" type="text" sortOrder="60" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
 					<label>Sort Order</label>
 				</field>
