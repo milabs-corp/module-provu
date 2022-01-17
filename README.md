@@ -12,7 +12,6 @@ Magento 2.x
 ## Instalação via composer
  - `composer require milabs/module-provu`
  - `bin/magento setup:upgrade`
- - `bin/magento setup:di:copile`
  - `bin/magento setup:static-content:deploy -f pt_BR`
  - `bin/magento cache:clean`
 

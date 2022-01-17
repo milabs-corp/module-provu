@@ -8,6 +8,7 @@
 				<order_status>pending</order_status>
 				<title>Provu</title>
 				<allowspecific>0</allowspecific>
+				<days_cron>3</days_cron>
 				<payment_action>order</payment_action>
 			</provu>
 		</payment>

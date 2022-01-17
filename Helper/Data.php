@@ -140,6 +140,16 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         return (string)$config;
     }
 
+    /**
+     * @return int
+     */
+    public function getDaysCron()
+    {
+        $config = $this->scopeConfig->getValue(
+            'payment/provu/days_cron'
+        );
+        return (int)$config;
+    }
 
     /**
      * @return string

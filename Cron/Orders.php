@@ -29,7 +29,7 @@ class Orders
      */
     public function execute()
     {
-        $this->logger->addInfo("Cronjob Orders is executed.");
+       // $this->logger->addInfo("Cronjob Orders is executed.");
     }
 }
 
