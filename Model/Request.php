@@ -131,9 +131,9 @@ abstract class Request extends \Magento\Framework\DataObject
             "TransactionId" => $this->getOrder()->getIncrementId(),
             "Currency"  => $this->getOrder()->getStoreCurrencyCode(),
             "Installments"  => 1,
-            "TotalAmount"  => (int)$this->numberValue($this->getOrder()->getBaseGrandTotal()) * 100,
-            "TotalDiscountAmount"  => (int)$this->numberValue($this->getOrder()->getBaseDiscountAmount()) * 100,
-            "TotalShippingAmount" => (int) $this->numberValue($this->getOrder()->getBaseShippingAmount()) * 100,
+            "TotalAmount"  => (int)$this->numberValue($this->getOrder()->getBaseGrandTotal() * 100),
+            "TotalDiscountAmount"  => (int)$this->numberValue($this->getOrder()->getBaseDiscountAmount() * 100),
+            "TotalShippingAmount" => (int) $this->numberValue($this->getOrder()->getBaseShippingAmount() * 100),
             "CallbackUrl" => $helper->getCallBackUrl(),
             "ReturnUrl" =>  $helper->getReturnUrl()
         ];
