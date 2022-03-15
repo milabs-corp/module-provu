@@ -56,10 +56,10 @@ class Customer extends \Magento\Framework\DataObject
     public function getRequest()
     {
 
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+        /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
         $logger->addWriter($writer);
-        $logger->info('customers = ' );
+        $logger->info('customers = ' ); */
 
 
         $this->order = $this->getOrder();

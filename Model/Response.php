@@ -92,10 +92,10 @@ class Response extends \Magento\Framework\DataObject
        fwrite($file, json_encode((array)$response, JSON_PRETTY_PRINT));
        fclose($file);
 
-            $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+            /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
             $logger = new \Zend\Log\Logger();
             $logger->addWriter($writer);
-            $logger->info('get response ----'. $response );
+            $logger->info('get response ----'. $response ); */
 
         // if (!($response instanceof \Zend_Http_Response)) {
         //     throw new \Exception(__('invalid response'));
