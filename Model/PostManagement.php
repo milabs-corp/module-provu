@@ -88,10 +88,10 @@ class PostManagement {
 
 
 		$data = $this->_request->getContent();
-		$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/post_lend2.log');
+		/* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/post_lend2.log');
 		$logger = new \Zend\Log\Logger();
 		$logger->addWriter($writer);
-		$logger->info($data);
+		$logger->info($data); */
 
 		$trasactionId = json_decode($data, true);
 

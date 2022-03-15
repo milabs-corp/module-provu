@@ -38,10 +38,10 @@ class Items extends \Magento\Framework\DataObject
     public function getRequest()
     {
     
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+        /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
         $logger->addWriter($writer);
-        $logger->info('itens = ');
+        $logger->info('itens = '); */
 
         return $this->setData(
             [
@@ -56,10 +56,10 @@ class Items extends \Magento\Framework\DataObject
 
         foreach ($order->getAllVisibleItems() as $item) {
 
-            $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+            /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
             $logger = new \Zend\Log\Logger();
             $logger->addWriter($writer);
-            $logger->info('item = '.json_encode($item->debug()));
+            $logger->info('item = '.json_encode($item->debug())); */
             
             $this->itens[] = [
                 "Id" =>  $item->getProductId(),

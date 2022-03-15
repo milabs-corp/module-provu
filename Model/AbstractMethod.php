@@ -197,10 +197,10 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
     {
 
         try {
-            $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+            /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
             $logger = new \Zend\Log\Logger();
             $logger->addWriter($writer);
-            $logger->info('getClient *******');
+            $logger->info('getClient *******'); */
 
             $token =  $this->helper->getMerchantToken();
             $key =  $this->helper->getMerchantKey();
@@ -262,10 +262,10 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
      */
     public function post()
     {
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+       /*  $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
         $logger->addWriter($writer);
-        $logger->info('post *******');
+        $logger->info('post *******'); */
 
         // $params = $this->getParams();
 
@@ -276,7 +276,7 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
         //     ->setParameterPost($params);
         //->setRawData($params);
 
-        $logger->info('post  retunr *******');
+        /* $logger->info('post  retunr *******'); */
         return $this;
     }
     
@@ -290,10 +290,10 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
     public function postOld()
     {
 
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+        /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
         $logger->addWriter($writer);
-        $logger->info('post *******');
+        $logger->info('post *******'); */
 
         //     $params = $this->getParams();
 
@@ -363,10 +363,10 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
             ->setPaymentData($this->getInfoInstance())
             ->buildRequest();
 
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+        /* $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
         $logger->addWriter($writer);
-        $logger->info('params = ' . json_encode($request));
+        $logger->info('params = ' . json_encode($request)); */
 
         return $request;
     }
@@ -380,16 +380,16 @@ abstract class AbstractMethod extends \Magento\Payment\Model\Method\AbstractMeth
     public function request()
     {
 
-        $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
+      /*   $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/provu_log.log');
         $logger = new \Zend\Log\Logger();
-        $logger->addWriter($writer);
+        $logger->addWriter($writer); */
 
         try {
            
              $response = $this->getClient();
              return json_decode($response, true);
         } catch (\Zend_Http_Client_Exception $e) {
-            $logger->info('request ERROR Zend ******* ' . $e);
+            /* $logger->info('request ERROR Zend ******* ' . $e); */
             throw $e;
         } catch (\Exception $e) {
             $message = 'Occurred an error during payment process. Try Again.';
